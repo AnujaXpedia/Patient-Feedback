@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi-Step Form Carousel</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="steps">
+                    <div class="step">
+                        <span class="step-number">1</span>
+                        <span class="step-title">YOUR INFO</span>
+                    </div>
+                    <div class="step">
+                        <span class="step-number">2</span>
+                        <span class="step-title">SELECT PLAN</span>
+                    </div>
+                    <div class="step active">
+                        <span class="step-number">3</span>
+                        <span class="step-title">ADD-ONS</span>
+                    </div>
+                    <div class="step">
+                        <span class="step-number">4</span>
+                        <span class="step-title">SUMMARY</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-8">
+                <div id="multiStepForm" class="carousel slide" data-ride="carousel" data-interval="false">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <h2>Pick add-ons</h2>
+                            <p>Add-ons help enhance your gaming experience.</p>
+                            <div class="form-group">
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="onlineService">
+                                    <label class="custom-control-label" for="onlineService">Online service <span>+$1/mo</span></label>
+                                    <small class="form-text text-muted">Access to multiplayer games</small>
+                                </div>
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="largerStorage">
+                                    <label class="custom-control-label" for="largerStorage">Larger storage <span>+$2/mo</span></label>
+                                    <small class="form-text text-muted">Extra 1TB of cloud save</small>
+                                </div>
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="customizableProfile">
+                                    <label class="custom-control-label" for="customizableProfile">Customizable Profile <span>+$2/mo</span></label>
+                                    <small class="form-text text-muted">Custom theme on your profile</small>
+                                </div>
+                            </div>
+                            <button class="btn btn-secondary" onclick="prevStep()">Go Back</button>
+                            <button class="btn btn-primary" onclick="nextStep()">Next Step</button>
+                        </div>
+                        <!-- Add more carousel-item divs for other steps as needed -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        function nextStep() {
+            $('#multiStepForm').carousel('next');
+        }
+
+        function prevStep() {
+            $('#multiStepForm').carousel('prev');
+        }
+    </script>
+</body>
+</html>
