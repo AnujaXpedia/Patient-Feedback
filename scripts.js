@@ -1,12 +1,32 @@
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-<script>
-    function nextStep() {
-        $('#multiStepForm').carousel('next');
+function nextStep() {
+    if ($('#multiStepForm').find('.carousel-item.active').index() === 2) {
+        generatePreview();
     }
+    $('#multiStepForm').carousel('next');
+}
 
-    function prevStep() {
-        $('#multiStepForm').carousel('prev');
-    }
-</script>
+function prevStep() {
+    $('#multiStepForm').carousel('prev');
+}
+
+function generatePreview() {
+    const yourInfo = document.getElementById('yourInfo').value;
+    const selectPlan = document.getElementById('selectPlan').value;
+    const addOns = document.getElementById('addOns').value;
+
+    document.getElementById('preview').innerHTML = `
+        <h3>Preview</h3>
+        <p><strong>Your Info:</strong> ${yourInfo}</p>
+        <p><strong>Select Plan:</strong> ${selectPlan}</p>
+        <p><strong>Add-ons:</strong> ${addOns}</p>
+    `;
+}
+
+function submitForm() {
+    const yourInfo = document.getElementById('yourInfo').value;
+    const selectPlan = document.getElementById('selectPlan').value;
+    const addOns = document.getElementById('addOns').value;
+    const summary = document.getElementById('summary').value;
+
+    alert(`Form submitted!\nYour Info: ${yourInfo}\nSelect Plan: ${selectPlan}\nAdd-ons: ${addOns}\nSummary: ${summary}`);
+}
