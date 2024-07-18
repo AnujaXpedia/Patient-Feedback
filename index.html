@@ -1,86 +1,160 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Multi-Step Form Carousel</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <div class="container mt-5">
-        <div class="row justify-content-center mb-4">
-            <img src="path/to/image.png" alt="Kauvery Hospital Logo" class="hospital-logo">
-        </div>
-        <div class="row">
-            <div class="col-md-4">
-                <div class="steps">
-                    <div class="step active" id="step-1">
-                        <span class="step-number">1</span>
-                        <span class="step-title">YOUR INFO</span>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Multistep form</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <body>
+        <div class="container">
+            <header>Signup Form</header>
+            <div class="progress-bar">
+                <div class="step">
+                    <p>Name</p>
+                    <div class="bullet">
+                        <span>1</span>
                     </div>
-                    <div class="step" id="step-2">
-                        <span class="step-number">2</span>
-                        <span class="step-title">SELECT PLAN</span>
+                    <div class="check fas fa-check"></div>
+                </div>
+                <div class="step">
+                    <p>Contact</p>
+                    <div class="bullet">
+                        <span>2</span>
                     </div>
-                    <div class="step" id="step-3">
-                        <span class="step-number">3</span>
-                        <span class="step-title">ADD-ONS</span>
+                    <div class="check fas fa-check"></div>
+                </div>
+                <div class="step">
+                    <p>Birth</p>
+                    <div class="bullet">
+                        <span>3</span>
                     </div>
-                    <div class="step" id="step-4">
-                        <span class="step-number">4</span>
-                        <span class="step-title">SUMMARY</span>
+                    <div class="check fas fa-check"></div>
+                </div>
+                <div class="step">
+                    <p>Debt</p>
+                    <div class="bullet">
+                        <span>4</span>
                     </div>
+                    <div class="check fas fa-check"></div>
+                </div>
+                <div class="step">
+                    <p>Adress</p>
+                    <div class="bullet">
+                        <span>5</span>
+                    </div>
+                    <div class="check fas fa-check"></div>
+                </div>
+                <div class="step">
+                    <p>Submit</p>
+                    <div class="bullet">
+                        <span>6</span>
+                    </div>
+                    <div class="check fas fa-check"></div>
                 </div>
             </div>
-            <div class="col-md-8">
-                <div id="multiStepForm" class="carousel slide" data-ride="carousel" data-interval="false">
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <h2>Step 1: Your Info</h2>
-                            <div class="form-group">
-                                <label for="yourInfo">Your Info</label>
-                                <input type="text" class="form-control" id="yourInfo" placeholder="Enter your info">
-                            </div>
-                            <button class="btn btn-primary" onclick="nextStep()">Next Step</button>
+            <div class="form-outer">
+                <form action="#">
+                    <div class="page slide-page">
+                        <div class="title">Basic Info:</div>
+                        <div class="field">
+                            <div class="label">First Name</div>
+                            <input type="text" required />
                         </div>
-                        <div class="carousel-item">
-                            <h2>Step 2: Select Plan</h2>
-                            <div class="form-group">
-                                <label for="selectPlan">Select Plan</label>
-                                <input type="text" class="form-control" id="selectPlan" placeholder="Select your plan">
-                            </div>
-                            <button class="btn btn-secondary" onclick="prevStep()">Go Back</button>
-                            <button class="btn btn-primary" onclick="nextStep()">Next Step</button>
+                        <div class="field">
+                            <div class="label">Last Name</div>
+                            <input type="text" required />
                         </div>
-                        <div class="carousel-item">
-                            <h2>Step 3: Add-ons</h2>
-                            <div class="form-group">
-                                <label for="addOns">Add-ons</label>
-                                <input type="text" class="form-control" id="addOns" placeholder="Choose add-ons">
-                            </div>
-                            <button class="btn btn-secondary" onclick="prevStep()">Go Back</button>
-                            <button class="btn btn-primary" onclick="nextStep()">Next Step</button>
-                        </div>
-                        <div class="carousel-item">
-                            <h2>Step 4: Summary</h2>
-                            <div class="form-group">
-                                <label for="summary">Summary</label>
-                                <textarea class="form-control" id="summary" placeholder="Review summary" rows="5"></textarea>
-                            </div>
-                            <div id="preview"></div>
-                            <button class="btn btn-secondary" onclick="prevStep()">Go Back</button>
-                            <button class="btn btn-primary" onclick="submitForm()">Submit</button>
+                        <div class="field">
+                            <button class="firstNext next">Next</button>
                         </div>
                     </div>
-                </div>
-            </div>
-        </div>
-    </div>
 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="scripts.js"></script>
-</body>
+                    <div class="page">
+                        <div class="title">Contact Info:</div>
+                        <div class="field">
+                            <div class="label">Email Address</div>
+                            <input type="text" required />
+                        </div>
+                        <div class="field">
+                            <div class="label">Phone Number</div>
+                            <input type="Number" required />
+                        </div>
+                        <div class="field btns">
+                            <button class="prev-1 prev">Previous</button>
+                            <button class="next-1 next">Next</button>
+                        </div>
+                    </div>
+                    <div class="page">
+                        <div class="title">Contact Info 2:</div>
+                        <div class="field">
+                            <div class="label">Email Address</div>
+                            <input type="text" required />
+                        </div>
+                        <div class="field">
+                            <div class="label">Phone Number</div>
+                            <input type="Number" required />
+                        </div>
+                        <div class="field btns">
+                            <button class="prev-2 prev">Previous</button>
+                            <button class="next-2 next">Next</button>
+                        </div>
+                    </div>
+                    <div class="page">
+                        <div class="title">Contact Info 3:</div>
+                        <div class="field">
+                            <div class="label">Email Address</div>
+                            <input type="text" required />
+                        </div>
+                        <div class="field">
+                            <div class="label">Phone Number</div>
+                            <input type="Number" required />
+                        </div>
+                        <div class="field btns">
+                            <button class="prev-3 prev">Previous</button>
+                            <button class="next-3 next">Next</button>
+                        </div>
+                    </div>
+
+                    <div class="page">
+                        <div class="title">Date of Birth:</div>
+                        <div class="field">
+                            <div class="label">Date</div>
+                            <input type="text" required />
+                        </div>
+                        <div class="field">
+                            <div class="label">Gender</div>
+                            <select required>
+                                <option>Male</option>
+                                <option>Female</option>
+                                <option>Other</option>
+                            </select>
+                        </div>
+                        <div class="field btns">
+                            <button class="prev-4 prev">Previous</button>
+                            <button class="next-4 next">Next</button>
+                        </div>
+                    </div>
+
+                    <div class="page">
+                        <div class="title">Login Details:</div>
+                        <div class="field">
+                            <div class="label">Username</div>
+                            <input type="text" required />
+                        </div>
+                        <div class="field">
+                            <div class="label">Password</div>
+                            <input type="password" required />
+                        </div>
+                        <div class="field btns">
+                            <button class="prev-5 prev">Previous</button>
+                            <button class="submit">Submit</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <script src="script.js"></script>
+    </body>
 </html>
