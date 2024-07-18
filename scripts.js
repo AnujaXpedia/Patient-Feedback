@@ -1,11 +1,15 @@
 function nextStep() {
-    if ($('#multiStepForm').find('.carousel-item.active').index() === 2) {
+    const currentIndex = $('#multiStepForm').find('.carousel-item.active').index();
+    if (currentIndex === 2) {
         generatePreview();
     }
+    updateStepIndicator(currentIndex + 2);
     $('#multiStepForm').carousel('next');
 }
 
 function prevStep() {
+    const currentIndex = $('#multiStepForm').find('.carousel-item.active').index();
+    updateStepIndicator(currentIndex);
     $('#multiStepForm').carousel('prev');
 }
 
@@ -30,3 +34,14 @@ function submitForm() {
 
     alert(`Form submitted!\nYour Info: ${yourInfo}\nSelect Plan: ${selectPlan}\nAdd-ons: ${addOns}\nSummary: ${summary}`);
 }
+
+function updateStepIndicator(step) {
+    document.querySelectorAll('.step').forEach((el, index) => {
+        if (index + 1 === step) {
+            el.classList.add('active');
+        } else {
+            el.classList.remove('active');
+        }
+    });
+}
+
