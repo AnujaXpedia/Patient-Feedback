@@ -62,6 +62,49 @@ body {
     margin-bottom: 20px;
 }
 
+button {
+    margin-top: 20px;
+}
+
+.step-number {
+    background-color: #ffffff;
+    color: #3740ff;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+.step-title {
+    font-weight: bold;
+}
+
+.step.active .step-number {
+    background-color: #00bcd4;
+    color: white;
+}
+
+.carousel-inner {
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.carousel-item h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.carousel-item p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
 .custom-control-label span {
     float: right;
     color: #6c757d;
