@@ -12,7 +12,7 @@
         <div class="row">
             <div class="col-md-4">
                 <div class="steps">
-                    <div class="step">
+                    <div class="step active">
                         <span class="step-number">1</span>
                         <span class="step-title">YOUR INFO</span>
                     </div>
@@ -20,7 +20,7 @@
                         <span class="step-number">2</span>
                         <span class="step-title">SELECT PLAN</span>
                     </div>
-                    <div class="step active">
+                    <div class="step">
                         <span class="step-number">3</span>
                         <span class="step-title">ADD-ONS</span>
                     </div>
@@ -34,29 +34,41 @@
                 <div id="multiStepForm" class="carousel slide" data-ride="carousel" data-interval="false">
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                            <h2>Pick add-ons</h2>
-                            <p>Add-ons help enhance your gaming experience.</p>
+                            <h2>Step 1: Your Info</h2>
                             <div class="form-group">
-                                <div class="custom-control custom-checkbox">
-                                    <input type="checkbox" class="custom-control-input" id="onlineService">
-                                    <label class="custom-control-label" for="onlineService">Online service <span>+$1/mo</span></label>
-                                    <small class="form-text text-muted">Access to multiplayer games</small>
-                                </div>
-                                <div class="custom-control custom-checkbox">
-                                    <input type="checkbox" class="custom-control-input" id="largerStorage">
-                                    <label class="custom-control-label" for="largerStorage">Larger storage <span>+$2/mo</span></label>
-                                    <small class="form-text text-muted">Extra 1TB of cloud save</small>
-                                </div>
-                                <div class="custom-control custom-checkbox">
-                                    <input type="checkbox" class="custom-control-input" id="customizableProfile">
-                                    <label class="custom-control-label" for="customizableProfile">Customizable Profile <span>+$2/mo</span></label>
-                                    <small class="form-text text-muted">Custom theme on your profile</small>
-                                </div>
+                                <label for="yourInfo">Your Info</label>
+                                <input type="text" class="form-control" id="yourInfo" placeholder="Enter your info">
+                            </div>
+                            <button class="btn btn-primary" onclick="nextStep()">Next Step</button>
+                        </div>
+                        <div class="carousel-item">
+                            <h2>Step 2: Select Plan</h2>
+                            <div class="form-group">
+                                <label for="selectPlan">Select Plan</label>
+                                <input type="text" class="form-control" id="selectPlan" placeholder="Select your plan">
                             </div>
                             <button class="btn btn-secondary" onclick="prevStep()">Go Back</button>
                             <button class="btn btn-primary" onclick="nextStep()">Next Step</button>
                         </div>
-                        <!-- Add more carousel-item divs for other steps as needed -->
+                        <div class="carousel-item">
+                            <h2>Step 3: Add-ons</h2>
+                            <div class="form-group">
+                                <label for="addOns">Add-ons</label>
+                                <input type="text" class="form-control" id="addOns" placeholder="Choose add-ons">
+                            </div>
+                            <button class="btn btn-secondary" onclick="prevStep()">Go Back</button>
+                            <button class="btn btn-primary" onclick="nextStep()">Next Step</button>
+                        </div>
+                        <div class="carousel-item">
+                            <h2>Step 4: Summary</h2>
+                            <div class="form-group">
+                                <label for="summary">Summary</label>
+                                <textarea class="form-control" id="summary" placeholder="Review summary" rows="5"></textarea>
+                            </div>
+                            <div id="preview"></div>
+                            <button class="btn btn-secondary" onclick="prevStep()">Go Back</button>
+                            <button class="btn btn-primary" onclick="submitForm()">Submit</button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -66,14 +78,6 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script>
-        function nextStep() {
-            $('#multiStepForm').carousel('next');
-        }
-
-        function prevStep() {
-            $('#multiStepForm').carousel('prev');
-        }
-    </script>
+    <script src="scripts.js"></script>
 </body>
 </html>
