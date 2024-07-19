@@ -30,32 +30,73 @@
       </div>
       <main class="content">
         <div class="form-container">
-          <form>
-            <h2>How would you rate the services provided during your visit?</h2>
-            <div class="rating">
-              <label>
-                <input type="radio" name="rating" value="0"> 0
-              </label>
-              <label>
-                <input type="radio" name="rating" value="1"> 1
-              </label>
-              <label>
-                <input type="radio" name="rating" value="2"> 2
-              </label>
-              <label>
-                <input type="radio" name="rating" value="3"> 3
-              </label>
-              <label>
-                <input type="radio" name="rating" value="4"> 4
-              </label>
-              <label>
-                <input type="radio" name="rating" value="5"> 5
-              </label>
+          <form id="multi-step-form">
+            <!-- Step 1 -->
+            <div class="form-step form-step-active">
+              <h2>How would you rate the services provided during your visit?</h2>
+              <div class="rating">
+                <label>
+                  <input type="radio" name="rating1" value="0"> 0
+                </label>
+                <label>
+                  <input type="radio" name="rating1" value="1"> 1
+                </label>
+                <label>
+                  <input type="radio" name="rating1" value="2"> 2
+                </label>
+                <label>
+                  <input type="radio" name="rating1" value="3"> 3
+                </label>
+                <label>
+                  <input type="radio" name="rating1" value="4"> 4
+                </label>
+                <label>
+                  <input type="radio" name="rating1" value="5"> 5
+                </label>
+              </div>
+              <button type="button" class="btn-next">Next</button>
             </div>
-            <button type="submit">OK</button>
+            <!-- Step 2 -->
+            <div class="form-step">
+              <h2>How satisfied are you with the cleanliness of our facility?</h2>
+              <div class="rating">
+                <label>
+                  <input type="radio" name="rating2" value="0"> 0
+                </label>
+                <label>
+                  <input type="radio" name="rating2" value="1"> 1
+                </label>
+                <label>
+                  <input type="radio" name="rating2" value="2"> 2
+                </label>
+                <label>
+                  <input type="radio" name="rating2" value="3"> 3
+                </label>
+                <label>
+                  <input type="radio" name="rating2" value="4"> 4
+                </label>
+                <label>
+                  <input type="radio" name="rating2" value="5"> 5
+                </label>
+              </div>
+              <div class="button-group">
+                <button type="button" class="btn-prev">Previous</button>
+                <button type="button" class="btn-next">Next</button>
+              </div>
+            </div>
+            <!-- Step 3 -->
+            <div class="form-step">
+              <h2>Please provide any additional comments</h2>
+              <textarea name="comments" rows="4" cols="50"></textarea>
+              <div class="button-group">
+                <button type="button" class="btn-prev">Previous</button>
+                <button type="submit" class="btn-submit">Submit</button>
+              </div>
+            </div>
           </form>
         </div>
       </main>
     </div>
+    <script src="scripts.js"></script>
   </body>
 </html>
