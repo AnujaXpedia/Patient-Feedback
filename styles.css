@@ -114,14 +114,11 @@ h1 {
   z-index: -1; /* Ensure it's behind other content */
 }
 
-left-center-image {
-  position: absolute;
-  top: 20px; /* Start 20px from the top of the main content */
-  left: 0;
-  width: auto;
-  height: calc(100% - 40px); /* Adjust height to fit within the main content */
+.left-center-image {
+  flex: 1; /* Allow the image to take the remaining space */
   max-width: 10cm; /* Set maximum width to 10 cm */
-  z-index: -1; /* Ensure it's behind other content */
+  height: auto;
+  margin-right: 20px; /* Add some margin to the right of the image */
 }
 
 
