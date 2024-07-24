@@ -1,4 +1,4 @@
-body {
+bbody {
   font-family: Arial, sans-serif;
   background-color: #f6c53e;
   margin: 0;
@@ -11,10 +11,9 @@ body {
   position: relative;
 }
 
-.header img {
+.header img.header-image {
   width: 100%;
   height: auto;
-  max-width: none; /* Ensures the image is not restricted by a max width */
 }
 
 .button-container {
@@ -100,7 +99,7 @@ h1 {
 .main-content {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start; /* Align items to the start to keep them aligned at the top */
   position: relative;
   padding: 20px; /* Add padding to separate from the header */
 }
@@ -108,10 +107,10 @@ h1 {
 .left-center-image {
   position: absolute;
   left: 0;
-  top: 5;
-  transform: translateY(-50%);
-  max-width: 10cm; /* Adjust as needed */
-  max-height: auto; /* Adjust as needed */
+  top: calc(100% + 20px); /* Start from the bottom of the header and include margin-bottom */
+  width: calc(100% - 820px); /* Width calculation to align with the iframe */
+  max-width: 10cm; /* Set maximum width to 10 cm */
+  height: auto;
   z-index: -1; /* Ensure it's behind other content */
 }
 
@@ -132,5 +131,4 @@ iframe {
   border: none;
   box-shadow: 0 2px 3px rgba(0,0,0,0.1);
 }
-
 
