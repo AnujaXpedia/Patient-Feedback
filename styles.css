@@ -103,6 +103,7 @@ h1 {
   align-items: center;
   flex-direction: column;
   padding: 0 20px;
+  padding-left: 5cm;
 }
 
 iframe {
