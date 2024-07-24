@@ -12,11 +12,23 @@
       <button onclick="window.location.href='#emergency'">Emergency</button>
       <button class="selected" onclick="window.location.href='#ip-feedback'">IP Feedback</button>
       <button onclick="window.location.href='#op-feedback'">OP Feedback</button>
+    
+    </div>
+    <div class="hamburger-menu" onclick="toggleMenu()">
+      &#9776; <!-- Unicode character for hamburger icon -->
+    </div>
+    <div class="menu" id="menu">
+      <a href="#ip-feedback">IP Feedback</a>
+      <a href="#op-feedback">OP Feedback</a>
+      <a href="#emergency">Emergency</a>
+    </div>
+  </div>
     </div>
   </div>
   <h1>Submit Your Information</h1>
   <div class="form-container">
     <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSf1iOkuk7VmkB-FxjUbXRLW5ra9KPJwIpSm-wuYe2x6oVSfug/viewform?usp=sf_link"></iframe>
   </div>
+    <script src="script.js"></script>
 </body>
 </html>
