@@ -1,6 +1,6 @@
 body {
   font-family: Arial, sans-serif;
-  background-color: #f6c53e;
+  background-color: white;
   margin: 0;
   padding: 0;
 }
@@ -64,13 +64,13 @@ body {
   top: 50px;
   right: 10px;
   background-color: white;
-  border: 2px solid red;
+  border: 2px #c62a6b;
   padding: 10px;
   z-index: 10;
 }
 
 .menu a {
-  color: red;
+  color: #c62a6b;
   text-decoration: none;
   padding: 10px;
   text-align: center;
@@ -78,7 +78,7 @@ body {
 }
 
 .menu a:hover {
-  background-color: red;
+  background-color: #f6c53e;
   color: white;
 }
 
