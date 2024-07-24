@@ -96,23 +96,21 @@ h1 {
   margin: 20px 0;
 }
 
+
 .main-content {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start; /* Align items to the start to keep them aligned at the top */
-  position: relative;
-  padding: 20px; /* Add padding to separate from the header */
+  display: grid;
+  grid-template-columns: minmax(auto, 10cm) 1fr;
+  gap: 20px;
+  align-items: start;
+  padding: 20px;
 }
 
 .left-center-image {
-  position: absolute;
-  left: 0;
-  top: calc(100% + 20px); /* Start from the bottom of the header and include margin-bottom */
-  width: calc(100% - 820px); /* Width calculation to align with the iframe */
-  max-width: 10cm; /* Set maximum width to 10 cm */
+  width: 100%;
   height: auto;
-  z-index: -1; /* Ensure it's behind other content */
+  max-width: 10cm; /* Set maximum width to 10 cm */
 }
+
 
 .left-center-image {
   flex: 1; /* Allow the image to take the remaining space */
