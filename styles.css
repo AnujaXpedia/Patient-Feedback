@@ -1,10 +1,6 @@
 body {
   font-family: Arial, sans-serif;
   background-color: white;
-  background-image: url('bkg.jpg');
-  background-size: cover; /* Cover the whole page */
-  background-repeat: no-repeat; /* Do not repeat the background image */
-  background-position: center; /* Center the background image */
   margin: 0;
   padding: 0;
 }
