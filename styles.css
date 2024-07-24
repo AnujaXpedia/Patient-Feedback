@@ -97,14 +97,31 @@ h1 {
   margin: 20px 0;
 }
 
+.main-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.left-center-image {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  max-width: 150px; /* Adjust as needed */
+  max-height: 150px; /* Adjust as needed */
+}
+
 .form-container {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding-left: 5cm; /* Add left padding of 5 cm */
-  margin-left: 2cm; /* Reduce size by 2 cm on the left */
-  margin-right: 2cm; /* Reduce size by 2 cm on the right */
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background for the form container */
+  border-radius: 10px; /* Rounded corners */
+  margin: 20px 2cm; /* Reduce size by 2 cm on the left and right */
 }
 
 iframe {
