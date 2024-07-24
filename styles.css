@@ -108,9 +108,9 @@ h1 {
 .left-center-image {
   position: absolute;
   left: 0;
-  top: 0;
+  top: 5;
   transform: translateY(-50%);
-  max-width: 20cm; /* Adjust as needed */
+  max-width: 10cm; /* Adjust as needed */
   max-height: auto; /* Adjust as needed */
   z-index: -1; /* Ensure it's behind other content */
 }
