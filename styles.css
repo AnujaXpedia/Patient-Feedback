@@ -103,7 +103,9 @@ h1 {
   align-items: center;
   flex-direction: column;
   padding: 0 20px;
-  padding-left: 5cm;
+  padding-left: 5cm; /* Add left padding of 5 cm */
+  margin-left: 2cm; /* Reduce size by 2 cm on the left */
+  margin-right: 2cm; /* Reduce size by 2 cm on the right */
 }
 
 iframe {
