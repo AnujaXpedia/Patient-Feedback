@@ -27,9 +27,9 @@
       right: 10px;
     }
     .button-container button {
-      background-color: red; /* Button background color */
-      color: white; /* Button text color */
-      border: none;
+      background-color: transparent; /* Transparent background */
+      color: red; /* Red text color */
+      border: 2px solid red; /* Red border */
       padding: 10px 20px;
       text-align: center;
       text-decoration: none;
@@ -38,10 +38,11 @@
       margin: 5px;
       cursor: pointer;
       border-radius: 5px;
-      transition: background-color 0.3s;
+      transition: background-color 0.3s, color 0.3s;
     }
     .button-container button:hover {
-      background-color: darkred; /* Darker red on hover */
+      background-color: red; /* Red background on hover */
+      color: white; /* White text on hover */
     }
     h1 {
       text-align: center;
