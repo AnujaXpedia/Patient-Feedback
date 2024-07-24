@@ -115,8 +115,6 @@ h1 {
 }
 
 iframe {
-  width: 5cm; /* Set width to 15 cm */
-  height: 5cm; /* Set height to 25 cm */
   border: none;
   box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
 }
