@@ -4,7 +4,6 @@ body {
   background-image: url('bkg.jpg');
   background-size: cover; /* Cover the whole page */
   background-repeat: no-repeat; /* Do not repeat the background image */
-  background-attachment: fixed; /* Fixed background */
   background-position: center; /* Center the background image */
   margin: 0;
   padding: 0;
